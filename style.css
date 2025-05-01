@@ -1,0 +1,58 @@
+/* === General Reset and Body === */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* === Container === */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* === Header === */
+header {
+  background: #005ea5;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+/* === Section Headings === */
+section h2 {
+  color: #005ea5;
+  border-bottom: 2px solid #005ea5;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+/* === Subheadings === */
+section h3 {
+  color: #333;
+  margin-top: 20px;
+}
+
+/* === Lists === */
+ul {
+  padding-left: 20px;
+}
+
+/* === Footer === */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+}
