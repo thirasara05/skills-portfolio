@@ -12,6 +12,7 @@ body {
   color: #333;
   font-size: 16px;
   text-align: left;
+  scroll-behavior: smooth;
 }
 
 /* === Container === */
@@ -21,28 +22,28 @@ body {
   padding: 20px;
   background: #fff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 /* === Header === */
 header {
-  background: #005ea5;
+  background: linear-gradient(135deg, #005ea5, #003c6c);
   color: #fff;
   padding: 40px 20px;
   text-align: center;
-  border-radius: 8px 8px 0 0;
+  border-radius: 12px 12px 0 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-size: 2.8em;
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 10px;
 }
 
 header p {
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: 300;
 }
 
@@ -50,12 +51,14 @@ header p {
 nav {
   background: #003c6c;
   padding: 10px 0;
+  border-bottom: 4px solid #f8a6a1;
 }
 
 nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 nav ul li {
@@ -68,6 +71,7 @@ nav ul li a {
   font-size: 1.1em;
   font-weight: 500;
   transition: color 0.3s ease;
+  position: relative;
 }
 
 nav ul li a:hover {
@@ -93,7 +97,7 @@ section h3 {
 /* === Paragraphs === */
 section p {
   font-size: 1.1em;
-  line-height: 1.7;
+  line-height: 1.8;
   margin-bottom: 15px;
   color: #555;
 }
@@ -107,6 +111,16 @@ section a {
 section a:hover {
   color: #f8a6a1;
   text-decoration: underline;
+}
+
+/* === Highlighted Quotes or Notes === */
+blockquote {
+  border-left: 4px solid #f8a6a1;
+  background: #fff4f4;
+  padding: 15px 20px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #444;
 }
 
 /* === Tables === */
@@ -154,7 +168,7 @@ footer {
   color: #fff;
   font-size: 0.9em;
   font-weight: 300;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 12px 12px;
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -165,6 +179,33 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* === QA Style Enhancements === */
+.qa-keyword {
+  background: #d4edda;
+  color: #155724;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.95em;
+  font-family: monospace;
+}
+
+/* === Buttons (optional) === */
+.button {
+  display: inline-block;
+  background: #005ea5;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #003c6c;
 }
 
 /* === Responsive Design === */
@@ -187,6 +228,29 @@ footer a:hover {
   }
 
   table, section {
-    font-size: 0.9em;
+    font-size: 0.95em;
+  }
+}
+
+/* === Print Friendly === */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .container, header, footer, nav {
+    box-shadow: none;
+    background: none;
+    color: black;
+  }
+
+  a {
+    text-decoration: underline;
+    color: black;
+  }
+
+  nav, footer {
+    display: none;
   }
 }
