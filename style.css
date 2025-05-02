@@ -250,7 +250,5 @@ footer a:hover {
     color: black;
   }
 
-  nav, footer {
-    display: none;
-  }
+ 
 }
